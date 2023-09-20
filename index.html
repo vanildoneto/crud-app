@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@600&family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form>
+        <div>
+            <div class="titlesinputs"><label>Email</label></div>
+            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()"/>
+        <div>
+            <div class="titlesinputs"><label>Senha</label></div>
+            <input type="password" name="password" id="password" placeholder="Senha" onchange="validateFields()"/>
+        </div>
+        <div>
+            <button type="button" class="clear" id="recover-password-button" disabled>Recuperar senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" id="login-button" disabled>Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline">Registrar</button>
+        </div>
+    </form>
+</body>
+<script src="./script.js"></script>
+</html>
