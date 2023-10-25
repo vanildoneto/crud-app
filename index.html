@@ -12,22 +12,45 @@
 <body>
     <form>
         <div>
-            <div class="titlesinputs"><label>Email</label></div>
-            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()"/>
+            <div class="titlesinputs"><label> * Email</label></div>
+            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validacaoInputEmail()"/>
+            <div class="error" id="mensagem-de-erro-email">O email é obrigatório</div>
+            <div class="error" id="email-invalido">Email invalido</div>
         <div>
-            <div class="titlesinputs"><label>Senha</label></div>
-            <input type="password" name="password" id="password" placeholder="Senha" onchange="validateFields()"/>
+            <div class="titlesinputs"><label>* Senha</label></div>
+            <input type="password" name="password" id="password" placeholder="Senha" onchange="validacaoInputSenha()"/>
+            <div class="error" id="mensagem-de-erro-senha">A senha é obrigatória</div>
         </div>
         <div>
             <button type="button" class="clear" id="recover-password-button" disabled>Recuperar senha</button>
         </div>
         <div>
-            <button type="button" class="solid" id="login-button" disabled>Entrar</button>
+            <button type="button" class="style-login" id="login-button" disabled onclick="login()">Entrar</button>
         </div>
         <div>
-            <button type="button" class="outline">Registrar</button>
+            <button type="button" class="outline" onclick="registro()">Registrar</button>
         </div>
     </form>
 </body>
+
+<!-- <div class="loading">
+    <label class="c-loader"></label>
+</div>  -->
+
+
 <script src="./script.js"></script>
+<script src="./loading.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyBU9Mxbncqqwwzmk-XAezphoHIy3MOBRGg",
+    authDomain: "primeirocrud-ab9f4.firebaseapp.com",
+    projectId: "primeirocrud-ab9f4",
+    storageBucket: "primeirocrud-ab9f4.appspot.com",
+    messagingSenderId: "1002059341730",
+    appId: "1:1002059341730:web:e4affdbfa6c7eee30d5cfb"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
 </html>

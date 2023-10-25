@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
 }
+
 form {
     width: 300px;
 }
@@ -29,16 +30,18 @@ input, button {
     background-color: #ffffff;
     color: #333;
 }
+
 button {
     cursor: pointer;
 }
+
 button:active {
     opacity: 0.8;
 }
+
 button[disabled] {
     opacity: 0.8;
 }
- 
 
 .clear {
     background: transparent;
@@ -54,4 +57,113 @@ button[disabled] {
     background: transparent;
     color: white;
     border: 1px solid white;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.style-login {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.style-login:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #00ff88c8,
+        #338596,
+        #00ff88c8,
+        #338596,
+        #00ff88c8,
+        #338596,
+        #00ff88c8,
+        #338596,
+        #00ff88c8
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingstyle-login 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+    @keyframes glowingstyle-login {
+    0% {
+    background-position: 0 0;
+    }
+    50% {
+    background-position: 400% 0;
+    }
+    100% {
+    background-position: 0 0;
+    }
+}
+
+.style-login:active {
+    color: #000;
+}
+
+.style-login:active:after {
+    background: transparent;
+}
+
+.style-login:hover:before {
+    opacity: 1;
+}
+
+.style-login:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #efefef;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.loading {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.c-loader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #51d4db;
+    height: 70px;
+    width: 70px;
+}
+
+    @keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
+    }
 }
