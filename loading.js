@@ -15,9 +15,13 @@ function loading() {
 function esconderLoading() {
     const loadingDiv = document.getElementsByClassName('loading');
     const cloader = document.getElementsByClassName('c-loader');
-    
-    if((loadingDiv.length) && (cloader.length)) {
+
+    if (loadingDiv.length > 0) {
         loadingDiv[0].remove();
+    }
+
+    if (cloader.length > 0) {
         cloader[0].remove();
-    } 
+    }
 }
+

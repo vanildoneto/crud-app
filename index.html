@@ -22,13 +22,16 @@
             <div class="error" id="mensagem-de-erro-senha">A senha é obrigatória</div>
         </div>
         <div>
-            <button type="button" class="clear" id="recover-password-button" disabled>Recuperar senha</button>
+            <button type="button" class="clear" id="recover-password-button" onclick="recuperacaoDeSenha()" disabled>Recuperar senha</button>
         </div>
         <div>
             <button type="button" class="style-login" id="login-button" disabled onclick="login()">Entrar</button>
         </div>
         <div>
             <button type="button" class="outline" onclick="registro()">Registrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline" onclick="limpar()">Limpar</button>
         </div>
     </form>
 </body>
@@ -41,15 +44,15 @@
 <script src="./script.js"></script>
 <script src="./loading.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.5.1/firebase-auth-compat.js"></script>
 <script>
     const firebaseConfig = {
-    apiKey: "AIzaSyBU9Mxbncqqwwzmk-XAezphoHIy3MOBRGg",
-    authDomain: "primeirocrud-ab9f4.firebaseapp.com",
-    projectId: "primeirocrud-ab9f4",
-    storageBucket: "primeirocrud-ab9f4.appspot.com",
-    messagingSenderId: "1002059341730",
-    appId: "1:1002059341730:web:e4affdbfa6c7eee30d5cfb"
+        apiKey: "AIzaSyBU9Mxbncqqwwzmk-XAezphoHIy3MOBRGg",
+        authDomain: "primeirocrud-ab9f4.firebaseapp.com",
+        projectId: "primeirocrud-ab9f4",
+        storageBucket: "primeirocrud-ab9f4.appspot.com",
+        messagingSenderId: "1002059341730",
+        appId: "1:1002059341730:web:e4affdbfa6c7eee30d5cfb"
     };
     firebase.initializeApp(firebaseConfig);
 </script>
