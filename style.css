@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, #00ff88c8, #338596);
+    background-image: url('./img/3175994.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,4 +166,16 @@ button[disabled] {
     to {
         transform: rotate(1turn);
     }
+}
+
+.button-voltar {
+    display: flex;
+    margin-top: 30px;
+}
+
+.tituloRegistro {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
 }
