@@ -94,6 +94,7 @@ function mensagemError(error) {
 
 function voltar() {
     window.history.back()
+    esconderLoading();
 }
 
 function limpar() {

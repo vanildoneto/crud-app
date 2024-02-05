@@ -103,5 +103,9 @@ function recuperacaoDeSenha() {
 function limpar() {
     valorDoInputEmail.value = '';
     valorDoInputSenha.value = '';
+
+    document.getElementById('mensagem-de-erro-email').style.display = 'none';
+    document.getElementById('email-invalido').style.display = 'none';
+    document.getElementById('mensagem-de-erro-senha').style.display = 'none';
 }
     
