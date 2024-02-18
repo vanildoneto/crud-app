@@ -2,6 +2,12 @@ var valorDoInputEmail = document.getElementById('email');
 var valorDoInputSenha = document.getElementById('password');
 var confirmarSenha = document.getElementById('confimr-password');
 
+firebase.auth().onAuthStateChanged(user => {
+    if(user) {
+        window.location.href = "../home/home.html"
+    }
+});
+
 function registrarButton() {
     loading();
     firebase.auth().createUserWithEmailAndPassword(valorDoInputEmail.value, valorDoInputSenha.value).then(() => {

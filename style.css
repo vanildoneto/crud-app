@@ -169,7 +169,6 @@ button[disabled] {
 }
 
 .button-voltar {
-    display: flex;
     margin-top: 30px;
 }
 

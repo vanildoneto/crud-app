@@ -1,6 +1,12 @@
 var valorDoInputEmail = document.getElementById('email');
 var valorDoInputSenha = document.getElementById('password');
 
+firebase.auth().onAuthStateChanged(user => {
+    if(user) {
+        window.location.href = "pages/home/home.html"
+    }
+});
+
 function validacaoInputEmail() {
     habilitarBotoes();
     validacaoDeErrosEmail();
@@ -95,9 +101,6 @@ function recuperacaoDeSenha() {
         }, 100);
         esconderLoading();
     });
-    // firebase.auth().sendPasswordResetEmail('netojose457@gmail.com')
-    //     .then(() => alert('sucesso'))
-    //     .catch(error => alert('Error', error.message));
 }
 
 function limpar() {
