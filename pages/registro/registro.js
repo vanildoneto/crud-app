@@ -2,6 +2,7 @@ var valorDoInputEmail = document.getElementById('email');
 var valorDoInputSenha = document.getElementById('password');
 var confirmarSenha = document.getElementById('confimr-password');
 
+//função para manter o usuário logado, se ele estiver logado leva até a tela de home
 firebase.auth().onAuthStateChanged(user => {
     if(user) {
         window.location.href = "../home/home.html"
@@ -31,7 +32,6 @@ function validacaoInputEmail() {
     desabilitarBotaoRegistrar()
 }
 //#endregion
-
 
 
 //#region validação senha
