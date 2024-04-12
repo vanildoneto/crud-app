@@ -99,7 +99,7 @@ function mensagemError(error) {
 
 
 function voltar() {
-    window.history.back();
+    window.location.href = '../../index.html';
 }
 
 function limpar() {
