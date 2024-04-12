@@ -99,7 +99,6 @@ function mensagemError(error) {
 
 
 function voltar() {
-    esconderLoading();
     window.history.back();
 }
 
