@@ -12,6 +12,10 @@ firebase.auth().onAuthStateChanged(user => {
     }
 });
 
+function novaTransacao() {
+    window.location.href = '../transacao/transacao.html';
+}
+
 function procurarTransacoes(user) {
     loading();
     firebase.firestore()

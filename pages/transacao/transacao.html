@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transação</title>
+    <link rel="stylesheet" href="transacao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@600&family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1> Transação </h1>
+    <header>
+        <div class="button-style-log">
+            <button class="button-logout" type="button" onclick="voltarHome()">Voltar</button>
+        </div>
+    </header>
+
+    <form>
+        <div class="style-transacao">
+
+            <div class="radio-box-container">
+                <label class="titlesinputs"> Transação </label>
+                <div class="radio-container">
+                    <input type="radio" name="type" checked id="despesa">
+                    <label for="despesa" class="titlesinputs-radio"> Despesa </label>
+                    <input type="radio" name="type" id="receita">
+                    <label for="receita" class="titlesinputs-radio"> Receita </label> 
+                </div>
+            </div>
+
+            <p>
+                <label class="titlesinputs"> Data da Transação </label>
+                <input type="date">
+            </p>
+    
+            <p>
+                <label class="titlesinputs"> Moeda </label>
+                <select>
+                    <option> Dólar </option>
+                    <option selected> Real </option>
+                    <option> Euro </option>
+                </select>
+            </p>
+    
+            <p>
+                <label class="titlesinputs"> Valor </label>
+                <input type="number">
+            </p>
+    
+            <p>
+                <label class="titlesinputs"> Tipo de Transação </label>
+                <select>
+                    <option selected> -- Selecione um tipo de transação -- </option>
+                    <option> Alimetação </option>
+                    <option> Transporte </option>
+                    <option> Salário </option>
+                    <option> Outros </option>
+                </select>
+            </p>
+    
+            <p>
+                <label class="titlesinputs"> Descrição </label>
+                <input type="text">
+            </p>
+
+        </div>
+        
+    </form>
+
+    <div class="botoes-transacao">
+
+        <div>
+            <button type="button" class="botoes-style" onclick="salvar()"> Salvar </button>
+        </div>
+
+        <div>
+            <button type="button" class="botoes-style" onclick="limpar()"> Limpar </button>
+        </div>
+        
+    </div>
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.5.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.5.1/firebase-firestore-compat.js"></script>
+<script src="../../firebase-init.js"></script>
+<script src="/auth-guard.js"></script>
+<script src="../../loading.js"></script>
+<script src="transacao.js"></script>
+
+</html>

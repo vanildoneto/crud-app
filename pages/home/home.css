@@ -73,6 +73,13 @@ button.fab {
     box-shadow: 2px 2px 2px rgb(69, 206, 15);
 }
 
+button.fab:hover {
+    opacity: 0.8;
+    width: 100px;
+    height: 50px;
+    transition: 0.5s;
+}
+
 .fab.fixed {
     position: fixed;
 }

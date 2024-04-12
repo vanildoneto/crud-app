@@ -99,8 +99,8 @@ function mensagemError(error) {
 
 
 function voltar() {
-    window.history.back()
     esconderLoading();
+    window.history.back();
 }
 
 function limpar() {
